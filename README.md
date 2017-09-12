@@ -9,7 +9,9 @@ have no experience creating an Alexa skill, you should first follow read the
 following sections from my C++ version of the project:
 
 &nbsp;&nbsp;[Registering an Alexa Skill with an Amazon Developer Account](https://github.com/hanstxu/alexa_endpoint_cpp#registering-an-alexa-skill-with-an-amazon-developer-account)
+
 &nbsp;&nbsp;[Test your Alexa Skill](https://github.com/hanstxu/alexa_endpoint_cpp#test-your-alexa-skill)
+
 &nbsp;&nbsp;[Understanding the Alexa Skill Flow](https://github.com/hanstxu/alexa_endpoint_cpp#understanding-the-alexa-skill-flow)
 
 ### Running the Web Server
