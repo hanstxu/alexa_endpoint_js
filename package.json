@@ -1,0 +1,19 @@
+{
+  "name": "alexa_endpoint_js",
+  "version": "1.0.0",
+  "description": "starter nodejs endpoint for Amazon Alexa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"no test\"",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "alexa"
+  ],
+  "author": "Steven Xu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "express": "^4.15.4"
+  }
+}
