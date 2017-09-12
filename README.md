@@ -35,6 +35,7 @@ git clone https://github.com/hanstxu/alexa_endpoint_js.git
 
 4. Install the dependencies.
 ```bash
+cd alexa_endpoint_js
 npm install
 ```
 
