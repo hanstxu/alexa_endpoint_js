@@ -41,10 +41,38 @@ npm install
 
 5. If you haven't done so already, make your own **self-signed certificates**.
 Instructions are [here](https://github.com/hanstxu/alexa_endpoint_js/tree/master/certificates).
-I have some example certificates in my repository to show you what they should
+I have an example certificate in my repository to show you what one should
 look like but you should really use your own.
 
 6. Run the server.
 ```bash
 sudo npm start
 ```
+
+### Code
+
+**app/alexa.cpp** is the place you want to look for writing logic to respond to
+different Alexa requests. There is an **exports.handler** function that is
+analogous to the one that AWS Lambda provides for Node.js.
+
+```javascript
+exports.handler = function(request, callback) {
+  // Populate this with your own application id
+  if (request.session.application.applicationId !==
+    "TODO: fill in with your Skill application id")
+    callback("Invalid application id!");
+  
+  if (request.request.type === "LaunchRequest")
+    createResponse("You invoked this skill with a launch request.", callback);
+  else if (request.request.type === "IntentRequest")
+    createResponse("You invoked this skill with " +
+      request.request.intent.name + ".", callback);
+  else
+    createResponse("You invoked this skill with an unknown request.", callback);
+}
+```
+
+*Your skill* **_Application Id_** * can be found on the Amazon developer portal
+as shown in the screenshot below.*
+
+![Application Id](https://raw.githubusercontent.com/hanstxu/alexa_endpoint_cpp/master/screenshots/application_id.png)
